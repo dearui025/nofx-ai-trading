@@ -1,0 +1,24 @@
+NOFX AI交易系统部署信息
+========================
+
+部署时间: 2025-11-02 23:39:49
+
+后端信息:
+---------
+URL: cd /workspace
+平台: Zeabur
+状态: 已部署
+
+前端信息:
+---------
+URL: https://eqzurdzoaxibothslnna.supabase.co/storage/v1/object/public/nofx-frontend/index.html
+平台: Supabase Storage
+状态: 已部署
+
+访问链接:
+---------
+- 前端界面: https://eqzurdzoaxibothslnna.supabase.co/storage/v1/object/public/nofx-frontend/index.html
+- 后端API: cd /workspace
+- 健康检查: cd /workspace/health
+
+部署日志: deployment-20251102-233804.log
