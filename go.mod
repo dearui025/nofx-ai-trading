@@ -7,7 +7,7 @@ require (
 	github.com/ethereum/go-ethereum v1.14.12
 	github.com/gin-gonic/gin v1.11.0
 	github.com/lib/pq v1.10.9
-	github.com/sonirico/go-hyperliquid v0.17.0
+	github.com/sonirico/go-hyperliquid v0.16.4
 )
 
 require (
