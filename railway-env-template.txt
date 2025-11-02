@@ -1,0 +1,34 @@
+# Railway环境变量配置模板
+# 请将此模板中的值替换为您的实际API密钥
+
+# ===== 必需的核心变量 =====
+BINANCE_API_KEY=your_binance_api_key_here
+BINANCE_SECRET_KEY=your_binance_secret_key_here
+JWT_SECRET=your_jwt_secret_here
+
+# ===== AI模型API（至少配置一个）=====
+QWEN_API_KEY=your_qwen_api_key_here
+# 或者使用DeepSeek
+DEEPSEEK_API_KEY=your_deepseek_api_key_here
+
+# ===== Railway系统变量（保持不变）=====
+GO_ENV=production
+PORT=${{RAILWAY_PORT}}
+API_SERVER_PORT=${{RAILWAY_PORT}}
+RAILWAY_ENVIRONMENT=production
+
+# ===== 可选配置 =====
+# 如果使用其他交易所
+HYPERLIQUID_API_KEY=your_hyperliquid_key_here
+ASTER_API_KEY=your_aster_key_here
+
+# 风险控制参数
+MAX_POSITION_SIZE=1000
+STOP_LOSS_PERCENTAGE=5
+TAKE_PROFIT_PERCENTAGE=10
+
+# 配置说明：
+# 1. 在Railway控制台的Variables标签页中逐一添加这些变量
+# 2. 将 "your_xxx_here" 替换为您的实际API密钥
+# 3. 系统变量（包含${{}}的）保持原样不变
+# 4. 可选配置根据需要添加
