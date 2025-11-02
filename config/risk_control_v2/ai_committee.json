@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "conservative_mode": true,
+  "min_consensus_level": 0.7,
+  "max_models": 3,
+  "decision_timeout_seconds": 30,
+  "model_weights": {},
+  "voting_strategy": "weighted",
+  "conflict_resolution": "conservative",
+  "performance_tracking": true,
+  "auto_model_selection": true,
+  "fallback_strategy": "hold"
+}

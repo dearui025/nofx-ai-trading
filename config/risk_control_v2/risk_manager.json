@@ -1,0 +1,15 @@
+{
+  "global_risk_enabled": true,
+  "emergency_stop_enabled": true,
+  "monitoring_interval_seconds": 30,
+  "max_daily_loss": 0.05,
+  "max_drawdown": 0.15,
+  "position_size_limit": 0.1,
+  "leverage_limit": 10,
+  "alert_thresholds": {
+    "high_risk": 0.8,
+    "medium_risk": 0.6,
+    "low_risk": 0.3
+  },
+  "blacklist_duration_hours": 24
+}

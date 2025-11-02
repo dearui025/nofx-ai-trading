@@ -1,0 +1,202 @@
+{
+  "system": {
+    "name": "NOFX-Optimized",
+    "mode": "primary",
+    "version": "2.0",
+    "description": "NOFX交易系统全面优化版本 - 提高交易频率、胜率和资金利用率"
+  },
+  "traders": [
+    {
+      "id": "binance_qwen_optimized",
+      "name": "Binance Qwen Trader (Optimized)",
+      "enabled": true,
+      "ai_model": "deepseek",
+      "exchange": "binance",
+      "binance_api_key": "TTAn2bGplQRm2ESJuhP60edApOVgjlEMCPoByiB4KYnseKimSdscHooA53tFvHFr",
+      "binance_secret_key": "1wJnQyZJOvnKMDMeeJmqag95lqyrPYbZ4IaUsmsp3gHfIH1s38oWxVS8bpYy5lfx",
+      "binance_testnet": true,
+      "deepseek_key": "sk-95142b92e0964668bf65bcfeaf43aa4d",
+      "initial_balance": 5000,
+      "scan_interval_minutes": 2
+    }
+  ],
+  "trading": {
+    "scan_interval": "2m",
+    "confidence_threshold": 65,
+    "risk_reward_ratio": 1.8,
+    "enable_early_exit": true,
+    "enable_partial_profits": true,
+    "enable_trailing_stop": true,
+    "remove_observation_period": true
+  },
+  "signal_scoring": {
+    "enabled": true,
+    "min_score": 70,
+    "dimensions": {
+      "trend": {
+        "weight": 0.4,
+        "max_points": 40,
+        "criteria": {
+          "price_above_ema20": 20,
+          "macd_positive": 20
+        }
+      },
+      "momentum": {
+        "weight": 0.3,
+        "max_points": 30,
+        "criteria": {
+          "rsi_reasonable_range": 15,
+          "volume_amplification": 15
+        }
+      },
+      "market_structure": {
+        "weight": 0.3,
+        "max_points": 30,
+        "criteria": {
+          "support_resistance_level": 15,
+          "non_extreme_conditions": 15
+        }
+      }
+    }
+  },
+  "confidence_system": {
+    "base_confidence": 65,
+    "dynamic_adjustment": true,
+    "sharpe_based_adjustment": {
+      "poor_performance": {
+        "threshold": -0.3,
+        "confidence": 70
+      },
+      "slight_loss": {
+        "threshold_min": -0.3,
+        "threshold_max": 0,
+        "confidence": 65
+      },
+      "profitable": {
+        "threshold": 0,
+        "confidence": 60
+      }
+    }
+  },
+  "exit_strategy": {
+    "observation_period_disabled": true,
+    "profit_targets": [
+      {
+        "profit_pct": 0.005,
+        "close_pct": 30,
+        "move_sl_to_breakeven": true,
+        "description": "盈利0.5%时平仓30%，移动止损到保本"
+      },
+      {
+        "profit_pct": 0.010,
+        "close_pct": 50,
+        "description": "盈利1.0%时再平仓50%"
+      },
+      {
+        "profit_pct": 0.020,
+        "close_pct": 20,
+        "description": "剩余20%让利润奔跑"
+      }
+    ],
+    "dynamic_stop_loss": {
+      "type": "atr_based",
+      "multiplier": 2.0,
+      "description": "基于2倍ATR的动态止损，避免噪音触发"
+    }
+  },
+  "frequency_control": {
+    "base_mode": {
+      "hourly_limit": 4,
+      "daily_limit": 20,
+      "description": "基础模式：小时4次，日20次"
+    },
+    "elastic_mode": {
+      "trigger_profit": 0.005,
+      "hourly_limit": 8,
+      "daily_limit": 50,
+      "description": "弹性模式：盈利0.5%时触发，小时8次，日50次"
+    },
+    "absolute_limits": {
+      "max_hourly": 10,
+      "max_daily": 50,
+      "description": "硬上限防止过度交易"
+    }
+  },
+  "risk_management": {
+    "max_daily_loss": 8.0,
+    "max_drawdown": 15.0,
+    "max_positions": 3,
+    "margin_usage_limit": 80.0,
+    "position_sizing": {
+      "base_risk_percent": 2.0,
+      "max_risk_percent": 4.0,
+      "confidence_based_sizing": {
+        "confidence_80_plus": 1.0,
+        "confidence_75_79": 0.7,
+        "confidence_70_74": 0.5,
+        "confidence_65_69": 0.3,
+        "confidence_below_65": 0.0
+      }
+    }
+  },
+  "market_environment_filter": {
+    "enabled": true,
+    "min_atr_ratio": 0.6,
+    "max_correlation": 0.8,
+    "low_liquidity_hours": ["22:00-02:00", "06:00-08:00"],
+    "news_event_buffer": 30,
+    "choppy_market_threshold": 0.3,
+    "economic_data_filter": true
+  },
+  "correlation_risk": {
+    "enabled": true,
+    "max_correlation": 0.8,
+    "check_existing_positions": true,
+    "correlation_pairs": {
+      "crypto_majors": ["BTCUSDT", "ETHUSDT"],
+      "defi_tokens": ["UNIUSDT", "AAVEUSDT", "COMPUSDT"],
+      "layer1_tokens": ["SOLUSDT", "ADAUSDT", "DOTUSDT"]
+    }
+  },
+  "leverage": {
+    "btc_eth_leverage": 5,
+    "altcoin_leverage": 5,
+    "dynamic_leverage": {
+      "enabled": true,
+      "high_confidence": 5,
+      "medium_confidence": 3,
+      "low_confidence": 2
+    }
+  },
+  "use_default_coins": true,
+  "default_coins": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "BNBUSDT",
+    "XRPUSDT",
+    "DOGEUSDT",
+    "ADAUSDT",
+    "HYPEUSDT"
+  ],
+  "coin_pool_api_url": "",
+  "oi_top_api_url": "http://localhost:8888/oi-top",
+  "api_server_port": 8080,
+  "stop_trading_minutes": 60,
+  "optimization_features": {
+    "three_dimensional_scoring": true,
+    "market_environment_filtering": true,
+    "progressive_position_management": true,
+    "dynamic_confidence_adjustment": true,
+    "partial_profit_taking": true,
+    "atr_based_stop_loss": true,
+    "correlation_risk_control": true,
+    "frequency_optimization": true
+  },
+  "logging": {
+    "level": "info",
+    "enable_trade_reasoning": true,
+    "enable_filter_logging": true,
+    "enable_position_sizing_logs": true
+  }
+}

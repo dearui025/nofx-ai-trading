@@ -1,0 +1,54 @@
+{
+  "timestamp": "2025-11-01T19:51:31.6262769+08:00",
+  "cycle_number": 1,
+  "input_prompt": "",
+  "cot_trace": "🚨 SOS紧急模式已激活，系统自动执行风险控制措施，停止新开仓并准备平仓现有持仓。",
+  "decision_json": "[\n  {\n    \"symbol\": \"HYPEUSDT\",\n    \"action\": \"close_short\",\n    \"reasoning\": \"SOS紧急模式激活，执行风险控制平仓\"\n  }\n]",
+  "account_state": {
+    "total_balance": 4945.401033900001,
+    "available_balance": 4182.76391179,
+    "total_unrealized_profit": -54.598966099999416,
+    "position_count": 1,
+    "margin_used_pct": 16.228439193688015
+  },
+  "positions": [
+    {
+      "symbol": "HYPEUSDT",
+      "side": "short",
+      "position_amt": 91.64,
+      "entry_price": 43.388,
+      "mark_price": 43.78881491,
+      "unrealized_profit": -36.73067835,
+      "leverage": 5,
+      "liquidation_price": 51.59496394
+    }
+  ],
+  "candidate_coins": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "BNBUSDT",
+    "XRPUSDT",
+    "DOGEUSDT",
+    "ADAUSDT",
+    "HYPEUSDT"
+  ],
+  "decisions": [
+    {
+      "action": "close_short",
+      "symbol": "HYPEUSDT",
+      "quantity": 0,
+      "leverage": 0,
+      "price": 0,
+      "order_id": 0,
+      "timestamp": "2025-11-01T19:51:31.6257643+08:00",
+      "success": false,
+      "error": "❌ HYPEUSDT 处于强制观察期内，未触发止损条件，拒绝平仓"
+    }
+  ],
+  "execution_log": [
+    "❌ HYPEUSDT close_short 失败: ❌ HYPEUSDT 处于强制观察期内，未触发止损条件，拒绝平仓"
+  ],
+  "success": true,
+  "error_message": ""
+}

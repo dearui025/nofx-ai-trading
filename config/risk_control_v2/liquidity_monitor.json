@@ -1,0 +1,11 @@
+{
+  "enabled": true,
+  "min_liquidity_threshold": 100000,
+  "max_spread_threshold": 0.01,
+  "volume_check_enabled": true,
+  "min_24h_volume": 1000000,
+  "depth_check_levels": [0.1, 0.5, 1.0],
+  "update_interval_seconds": 60,
+  "alert_on_low_liquidity": true,
+  "emergency_stop_on_critical": true
+}

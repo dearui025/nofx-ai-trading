@@ -1,0 +1,116 @@
+{
+  "current_environment": "testnet",
+  "environments": {
+    "mainnet": {
+      "name": "真实环境",
+      "description": "真实交易环境，请谨慎操作",
+      "binance_base_url": "https://fapi.binance.com",
+      "binance_api_key": "3r70CDR3ciElwg26XhiTWipMavKAm8iJZ6JE1diDPS3Jev82lvNTIJOKj3WiLIeU",
+      "binance_secret_key": "AX3Vg6WD3bmisPk82qhyShNCQfYRuXxF7SCSxwPyZ5XIYlRPyQXTJqVnOdi5kiiE",
+      "deepseek_api_key": "sk-95142b92e0964668bf65bcfeaf43aa4d",
+      "oi_top_api_url": "",
+      "proxy_url": "http://127.0.0.1:7890",
+      "risk_limits": {
+        "max_position_size": 1000,
+        "max_daily_loss": 500,
+        "max_drawdown": 20,
+        "max_leverage": 20
+      },
+      "trading_settings": {
+        "scan_interval_minutes": 5,
+        "initial_balance": 10000,
+        "stop_trading_minutes": 30
+      },
+      "status": "inactive",
+      "last_validated": null,
+      "api_permissions": []
+    },
+    "testnet": {
+      "name": "测试网环境",
+      "description": "安全的测试环境，用于验证交易策略",
+      "binance_base_url": "https://testnet.binancefuture.com",
+      "binance_api_key": "TTAn2bGplQRm2ESJuhP60edApOVgjlEMCPoByiB4KYnseKimSdscHooA53tFvHFr",
+      "binance_secret_key": "1wJnQyZJOvnKMDMeeJmqag95lqyrPYbZ4IaUsmsp3gHfIH1s38oWxVS8bpYy5lfx",
+      "deepseek_api_key": "sk-95142b92e0964668bf65bcfeaf43aa4d",
+      "oi_top_api_url": "http://localhost:8888/oi-top",
+      "proxy_url": "http://127.0.0.1:7890",
+      "risk_limits": {
+        "max_position_size": 100,
+        "max_daily_loss": 50,
+        "max_drawdown": 10,
+        "max_leverage": 10
+      },
+      "trading_settings": {
+        "scan_interval_minutes": 3,
+        "initial_balance": 1000,
+        "stop_trading_minutes": 60
+      },
+      "status": "active",
+      "last_validated": "2025-11-01T08:31:42.4219464+08:00",
+      "api_permissions": [
+        "read",
+        "trade",
+        "futures"
+      ]
+    }
+  },
+  "validation_history": [
+    {
+      "environment": "testnet",
+      "timestamp": "2025-11-01T08:31:42.4219464+08:00",
+      "valid": true,
+      "permissions": [
+        "read",
+        "trade",
+        "futures"
+      ],
+      "errors": []
+    }
+  ],
+  "environment_switches": [
+    {
+      "from_environment": "testnet",
+      "to_environment": "mainnet",
+      "timestamp": "2025-11-01T08:28:49.9861869+08:00",
+      "success": true,
+      "message": "成功从 testnet 切换到 mainnet"
+    },
+    {
+      "from_environment": "mainnet",
+      "to_environment": "testnet",
+      "timestamp": "2025-11-01T08:31:07.4175553+08:00",
+      "success": true,
+      "message": "成功从 mainnet 切换到 testnet"
+    },
+    {
+      "from_environment": "testnet",
+      "to_environment": "testnet",
+      "timestamp": "2025-11-01T08:48:34.3773774+08:00",
+      "success": true,
+      "message": "成功从 testnet 切换到 testnet"
+    },
+    {
+      "from_environment": "testnet",
+      "to_environment": "testnet",
+      "timestamp": "2025-11-01T08:52:18.4660205+08:00",
+      "success": true,
+      "message": "成功从 testnet 切换到 testnet"
+    },
+    {
+      "from_environment": "testnet",
+      "to_environment": "mainnet",
+      "timestamp": "2025-11-01T09:01:59.9145107+08:00",
+      "success": true,
+      "message": "成功从 testnet 切换到 mainnet"
+    },
+    {
+      "from_environment": "mainnet",
+      "to_environment": "testnet",
+      "timestamp": "2025-11-01T16:07:03.9882829+08:00",
+      "success": true,
+      "message": "成功从 mainnet 切换到 testnet"
+    }
+  ],
+  "created_at": "2024-01-01T00:00:00Z",
+  "updated_at": "2025-11-01T20:49:30.466622+08:00"
+}

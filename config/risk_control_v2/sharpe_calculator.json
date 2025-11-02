@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "calculation_window_days": 30,
+  "min_trades_required": 10,
+  "risk_free_rate": 0.02,
+  "update_interval_seconds": 300,
+  "performance_thresholds": {
+    "excellent": 2.0,
+    "good": 1.0,
+    "neutral": 0.0,
+    "poor": -0.5,
+    "very_poor": -1.0
+  },
+  "alert_on_poor_performance": true,
+  "auto_adjust_position_size": true
+}

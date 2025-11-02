@@ -1,0 +1,23 @@
+{
+  "timezone": "UTC",
+  "trading_hours": {
+    "start": "00:00",
+    "end": "23:59"
+  },
+  "market_sessions": {
+    "asian": {
+      "start": "00:00",
+      "end": "08:00"
+    },
+    "european": {
+      "start": "08:00",
+      "end": "16:00"
+    },
+    "american": {
+      "start": "16:00",
+      "end": "23:59"
+    }
+  },
+  "holidays": [],
+  "maintenance_windows": []
+}

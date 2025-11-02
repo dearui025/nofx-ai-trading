@@ -1,0 +1,31 @@
+{
+  "current_mode": "basic",
+  "daily_realized_pnl": 0,
+  "daily_pnl_percent": 0,
+  "hourly_trade_count": 1,
+  "daily_trade_count": 5,
+  "last_mode_switch": "2025-11-01T18:22:48.1897443+08:00",
+  "account_equity": 4769.997395959999,
+  "last_hourly_reset": "2025-11-02T13:35:27.3473793+08:00",
+  "last_daily_reset": "2025-11-02T10:32:25.1356652+08:00",
+  "mode_upgrade_count": 0,
+  "mode_downgrade_count": 0,
+  "rejected_trade_count": 0,
+  "limits": {
+    "basic_mode": {
+      "hourly_limit": 4,
+      "daily_limit": 20
+    },
+    "elastic_mode": {
+      "hourly_limit": 8,
+      "daily_limit": 50
+    },
+    "absolute_limit": {
+      "hourly_max": 10
+    },
+    "thresholds": {
+      "upgrade_pnl_percent": 0.5,
+      "downgrade_pnl_percent": 0.2
+    }
+  }
+}

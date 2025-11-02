@@ -1,0 +1,37 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "Dockerfile"
+  },
+  "deploy": {
+    "numReplicas": 1,
+    "sleepApplication": false,
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  },
+  "environments": {
+    "production": {
+      "variables": {
+        "GO_ENV": "production",
+        "PORT": "${{RAILWAY_PORT}}",
+        "API_SERVER_PORT": "${{RAILWAY_PORT}}",
+        "RAILWAY_ENVIRONMENT": "production"
+      }
+    }
+  },
+  "regions": ["us-west1"],
+  "services": [
+    {
+      "name": "nofx-api",
+      "source": {
+        "type": "image",
+        "image": "nofx-ai-trading"
+      },
+      "variables": {
+        "PORT": "${{RAILWAY_PORT}}",
+        "GO_ENV": "production"
+      }
+    }
+  ]
+}

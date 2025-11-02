@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>环境API测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .test-result {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .warning {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>环境API测试页面</h1>
+    
+    <div>
+        <button onclick="testGetStatus()">测试获取环境状态</button>
+        <button onclick="testSwitchEnvironment()">测试切换环境</button>
+        <button onclick="clearResults()">清除结果</button>
+    </div>
+    
+    <div id="results"></div>
+
+    <script type="module">
+        // 环境API配置
+        const SUPABASE_CONFIG = {
+            url: 'https://eqzurdzoaxibothslnna.supabase.co',
+            anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVxenVyZHpvYXhpYm90aHNsbm5hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE4NzY2NjUsImV4cCI6MjA3NzQ1MjY2NX0.h2EQOkofLavh-DL68AGfFX7ZvJ4SipNsiO7K5uTh20Y',
+        };
+
+        const API_BASE_URL = 'https://eqzurdzoaxibothslnna.supabase.co/functions/v1/api-gateway/api/environment';
+
+        async function request(endpoint, options = {}) {
+            const url = `${API_BASE_URL}${endpoint}`;
+            
+            const response = await fetch(url, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${SUPABASE_CONFIG.anonKey}`,
+                    'apikey': SUPABASE_CONFIG.anonKey,
+                    ...options.headers,
+                },
+                ...options,
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(errorData.error || `HTTP ${response.status}: ${response.statusText}`);
+            }
+
+            return response.json();
+        }
+
+        function addResult(type, title, content) {
+            const resultsDiv = document.getElementById('results');
+            const resultDiv = document.createElement('div');
+            resultDiv.className = `test-result ${type}`;
+            resultDiv.innerHTML = `
+                <h3>${title}</h3>
+                <pre>${typeof content === 'object' ? JSON.stringify(content, null, 2) : content}</pre>
+            `;
+            resultsDiv.appendChild(resultDiv);
+        }
+
+        window.testGetStatus = async function() {
+            try {
+                addResult('warning', '正在测试获取环境状态...', '发送请求中...');
+                const result = await request('/status');
+                addResult('success', '✅ 获取环境状态成功', result);
+            } catch (error) {
+                addResult('error', '❌ 获取环境状态失败', error.message);
+                
+                // 测试模拟数据
+                try {
+                    const mockData = {
+                        current_environment: 'testnet',
+                        status: 'active',
+                        api_status: {
+                            binance_configured: true,
+                            deepseek_configured: true,
+                            last_validated: new Date().toISOString()
+                        },
+                        last_updated: new Date().toISOString()
+                    };
+                    addResult('warning', '⚠️ 使用模拟数据', mockData);
+                } catch (mockError) {
+                    addResult('error', '❌ 模拟数据也失败', mockError.message);
+                }
+            }
+        };
+
+        window.testSwitchEnvironment = async function() {
+            try {
+                addResult('warning', '正在测试环境切换...', '发送请求中...');
+                const result = await request('/switch', {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        target_environment: 'mainnet'
+                    }),
+                });
+                addResult('success', '✅ 环境切换成功', result);
+            } catch (error) {
+                addResult('error', '❌ 环境切换失败', error.message);
+                
+                // 测试模拟响应
+                const mockResponse = {
+                    success: true,
+                    message: '已切换到mainnet环境（模拟）',
+                    environment: 'mainnet'
+                };
+                addResult('warning', '⚠️ 使用模拟响应', mockResponse);
+            }
+        };
+
+        window.clearResults = function() {
+            document.getElementById('results').innerHTML = '';
+        };
+
+        // 页面加载时自动测试
+        window.addEventListener('load', function() {
+            addResult('info', '页面已加载', '准备进行环境API测试');
+        });
+    </script>
+</body>
+</html>

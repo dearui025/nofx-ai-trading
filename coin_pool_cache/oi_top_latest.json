@@ -1,0 +1,226 @@
+{
+  "positions": [
+    {
+      "symbol": "BTCUSDT",
+      "rank": 1,
+      "current_oi": 4173843,
+      "oi_delta": -82789,
+      "oi_delta_percent": -1.98,
+      "oi_delta_value": 3883323.4080935027,
+      "price_delta_percent": 5.5,
+      "net_long": 2444447,
+      "net_short": 2230650
+    },
+    {
+      "symbol": "ETHUSDT",
+      "rank": 2,
+      "current_oi": 3182250,
+      "oi_delta": 51968,
+      "oi_delta_percent": 1.63,
+      "oi_delta_value": 2205799.812275979,
+      "price_delta_percent": -0.07,
+      "net_long": 1669173,
+      "net_short": 1304631
+    },
+    {
+      "symbol": "SOLUSDT",
+      "rank": 3,
+      "current_oi": 3255189,
+      "oi_delta": 121954,
+      "oi_delta_percent": 3.75,
+      "oi_delta_value": 5119748.695402776,
+      "price_delta_percent": -6.38,
+      "net_long": 1963057,
+      "net_short": 1318612
+    },
+    {
+      "symbol": "BNBUSDT",
+      "rank": 4,
+      "current_oi": 4942085,
+      "oi_delta": -157564,
+      "oi_delta_percent": -3.19,
+      "oi_delta_value": 9209417.50320062,
+      "price_delta_percent": -3.17,
+      "net_long": 2226371,
+      "net_short": 2219005
+    },
+    {
+      "symbol": "XRPUSDT",
+      "rank": 5,
+      "current_oi": 1727398,
+      "oi_delta": 279635,
+      "oi_delta_percent": 16.19,
+      "oi_delta_value": 12064973.40525801,
+      "price_delta_percent": -5.8,
+      "net_long": 1100568,
+      "net_short": 879782
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "rank": 6,
+      "current_oi": 3622929,
+      "oi_delta": -45591,
+      "oi_delta_percent": -1.26,
+      "oi_delta_value": 2090628.3180763326,
+      "price_delta_percent": -0.09,
+      "net_long": 1693180,
+      "net_short": 1195817
+    },
+    {
+      "symbol": "ADAUSDT",
+      "rank": 7,
+      "current_oi": 4652047,
+      "oi_delta": 26695,
+      "oi_delta_percent": 0.57,
+      "oi_delta_value": 1208398.0423195772,
+      "price_delta_percent": 4.01,
+      "net_long": 2071063,
+      "net_short": 1903377
+    },
+    {
+      "symbol": "HYPEUSDT",
+      "rank": 8,
+      "current_oi": 3279393,
+      "oi_delta": -86834,
+      "oi_delta_percent": -2.65,
+      "oi_delta_value": 4767494.686888837,
+      "price_delta_percent": -5.67,
+      "net_long": 1723745,
+      "net_short": 1666835
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "rank": 9,
+      "current_oi": 829319,
+      "oi_delta": -186197,
+      "oi_delta_percent": -22.45,
+      "oi_delta_value": 9312784.62513485,
+      "price_delta_percent": 3.45,
+      "net_long": 550437,
+      "net_short": 296912
+    },
+    {
+      "symbol": "LINKUSDT",
+      "rank": 10,
+      "current_oi": 4121983,
+      "oi_delta": 33742,
+      "oi_delta_percent": 0.82,
+      "oi_delta_value": 1492411.794915952,
+      "price_delta_percent": -4.03,
+      "net_long": 2285795,
+      "net_short": 2427302
+    },
+    {
+      "symbol": "DOTUSDT",
+      "rank": 11,
+      "current_oi": 2530933,
+      "oi_delta": -41777,
+      "oi_delta_percent": -1.65,
+      "oi_delta_value": 1948286.1083973956,
+      "price_delta_percent": -4.34,
+      "net_long": 1477908,
+      "net_short": 880527
+    },
+    {
+      "symbol": "UNIUSDT",
+      "rank": 12,
+      "current_oi": 4303109,
+      "oi_delta": 105311,
+      "oi_delta_percent": 2.45,
+      "oi_delta_value": 5887542.782618407,
+      "price_delta_percent": -7,
+      "net_long": 1895942,
+      "net_short": 2287974
+    },
+    {
+      "symbol": "LTCUSDT",
+      "rank": 13,
+      "current_oi": 4062206,
+      "oi_delta": -44763,
+      "oi_delta_percent": -1.1,
+      "oi_delta_value": 2361425.2560328054,
+      "price_delta_percent": -1.06,
+      "net_long": 2714813,
+      "net_short": 2170641
+    },
+    {
+      "symbol": "BCHUSDT",
+      "rank": 14,
+      "current_oi": 3495073,
+      "oi_delta": 155962,
+      "oi_delta_percent": 4.46,
+      "oi_delta_value": 7148799.36581266,
+      "price_delta_percent": 5.16,
+      "net_long": 2036427,
+      "net_short": 1390914
+    },
+    {
+      "symbol": "FILUSDT",
+      "rank": 15,
+      "current_oi": 1958736,
+      "oi_delta": 140683,
+      "oi_delta_percent": 7.18,
+      "oi_delta_value": 8351219.093785701,
+      "price_delta_percent": -1.73,
+      "net_long": 1092576,
+      "net_short": 1152565
+    },
+    {
+      "symbol": "TRXUSDT",
+      "rank": 16,
+      "current_oi": 1230801,
+      "oi_delta": 186413,
+      "oi_delta_percent": 15.15,
+      "oi_delta_value": 7984546.010653841,
+      "price_delta_percent": 7.37,
+      "net_long": 823465,
+      "net_short": 603711
+    },
+    {
+      "symbol": "ETCUSDT",
+      "rank": 17,
+      "current_oi": 1444433,
+      "oi_delta": 180528,
+      "oi_delta_percent": 12.5,
+      "oi_delta_value": 9241404.915569322,
+      "price_delta_percent": 7.13,
+      "net_long": 982465,
+      "net_short": 708952
+    },
+    {
+      "symbol": "XLMUSDT",
+      "rank": 18,
+      "current_oi": 3160587,
+      "oi_delta": 169610,
+      "oi_delta_percent": 5.37,
+      "oi_delta_value": 9469432.509269424,
+      "price_delta_percent": -0.75,
+      "net_long": 2133739,
+      "net_short": 1592816
+    },
+    {
+      "symbol": "VETUSDT",
+      "rank": 19,
+      "current_oi": 2320448,
+      "oi_delta": -60648,
+      "oi_delta_percent": -2.61,
+      "oi_delta_value": 3320549.1716127857,
+      "price_delta_percent": -0.17,
+      "net_long": 1596371,
+      "net_short": 741670
+    },
+    {
+      "symbol": "ICPUSDT",
+      "rank": 20,
+      "current_oi": 1996125,
+      "oi_delta": -38785,
+      "oi_delta_percent": -1.94,
+      "oi_delta_value": 2292721.0736980424,
+      "price_delta_percent": -0.77,
+      "net_long": 1392070,
+      "net_short": 827768
+    }
+  ],
+  "fetched_at": "2025-11-02T15:20:33.6124518+08:00",
+  "source_type": "api"
+}
