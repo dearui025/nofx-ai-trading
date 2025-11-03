@@ -1,0 +1,20 @@
+name: nofx-backend
+
+services:
+  - name: nofx
+    build:
+      type: dockerfile
+      dockerfile: Dockerfile
+    env:
+      BINANCE_API_KEY: H2StgimIA1ZlWbOKPxM4WlBdNnBN7kfvQCDTKTFLV0RBnhRbuXmyks9mSu42z3Wd
+      BINANCE_SECRET_KEY: 5Jw03ZarCQ13eGMV10CJFw2aQe4CJ3NVGXs14jXDWcDNZwe0wvQx9jXsGouVRWIB
+      BINANCE_TESTNET: "false"
+      DEEPSEEK_API_KEY: sk-87efaa443e9e4562b2a49ed141db4b2f
+      MAX_DAILY_LOSS: "10.0"
+      MAX_DRAWDOWN: "20.0"
+      STOP_TRADING_MINUTES: "60"
+      BTC_ETH_LEVERAGE: "5"
+      ALTCOIN_LEVERAGE: "5"
+      USE_DEFAULT_COINS: "true"
+      PORT: "8080"
+      API_SERVER_PORT: "8080"
