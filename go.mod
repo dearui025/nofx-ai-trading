@@ -67,5 +67,3 @@ require (
 	google.golang.org/protobuf v1.36.9 // indirect
 	howett.net/plist v1.0.1 // indirect
 )
-
-replace github.com/ethereum/go-ethereum => github.com/ethereum/go-ethereum v1.10.14
