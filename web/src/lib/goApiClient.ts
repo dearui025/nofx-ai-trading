@@ -1,7 +1,10 @@
 // Go后端API客户端
 // 连接到本地Go服务器API
 
-const GO_API_BASE_URL = 'http://localhost:8080/api';
+// 使用环境变量或默认localhost（开发环境）
+const GO_API_BASE_URL = import.meta.env.VITE_API_URL 
+  ? `${import.meta.env.VITE_API_URL}/api` 
+  : 'http://localhost:8080/api';
 
 // 市场数据响应类型
 interface MarketDataResponse {
