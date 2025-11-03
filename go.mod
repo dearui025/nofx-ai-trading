@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/adshao/go-binance/v2 v2.8.7
-	github.com/ethereum/go-ethereum v1.10.14
+	github.com/ethereum/go-ethereum v1.16.3
 	github.com/gin-gonic/gin v1.11.0
 	github.com/lib/pq v1.10.9
 	github.com/sonirico/go-hyperliquid v0.12.0
@@ -13,18 +13,12 @@ require (
 require (
 	github.com/armon/go-radix v1.0.0 // indirect
 	github.com/bitly/go-simplejson v0.5.0 // indirect
-	github.com/bits-and-blooms/bitset v1.24.0 // indirect
+	github.com/btcsuite/btcd v0.20.1-beta // indirect
 	github.com/bytedance/sonic v1.14.0 // indirect
 	github.com/bytedance/sonic/loader v0.3.0 // indirect
 	github.com/cloudwego/base64x v0.1.6 // indirect
-	github.com/consensys/gnark-crypto v0.19.0 // indirect
-	github.com/crate-crypto/go-eth-kzg v1.4.0 // indirect
-	github.com/crate-crypto/go-ipa v0.0.0-20240724233137-53bbb0ceb27a // indirect
-	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.4.0 // indirect
 	github.com/elastic/go-sysinfo v1.15.4 // indirect
 	github.com/elastic/go-windows v1.0.2 // indirect
-	github.com/ethereum/c-kzg-4844/v2 v2.1.5 // indirect
-	github.com/ethereum/go-verkle v0.2.2 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.8 // indirect
 	github.com/gin-contrib/sse v1.1.0 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect
@@ -34,7 +28,6 @@ require (
 	github.com/goccy/go-yaml v1.18.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/gorilla/websocket v1.5.3 // indirect
-	github.com/holiman/uint256 v1.3.2 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/jpillora/backoff v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
@@ -54,7 +47,6 @@ require (
 	github.com/shopspring/decimal v1.4.0 // indirect
 	github.com/sonirico/vago v0.9.0 // indirect
 	github.com/sonirico/vago/lol v0.0.0-20250901170347-2d1d82c510bd // indirect
-	github.com/supranational/blst v0.3.16 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ugorji/go/codec v1.3.0 // indirect
 	github.com/valyala/fastjson v1.6.4 // indirect
@@ -75,3 +67,5 @@ require (
 	google.golang.org/protobuf v1.36.9 // indirect
 	howett.net/plist v1.0.1 // indirect
 )
+
+replace github.com/ethereum/go-ethereum => github.com/ethereum/go-ethereum v1.10.14
